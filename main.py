@@ -22,5 +22,5 @@ if __name__ == '__main__':
         arg_host, arg_port = sys.argv[1].split(':')
         app.run(host='0.0.0.0', port=arg_port)
     else:
-        app.run()
+        app.run(host='0.0.0.0')
 
