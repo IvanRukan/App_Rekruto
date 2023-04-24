@@ -20,7 +20,7 @@ def main_view():
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         arg_host, arg_port = sys.argv[1].split(':')
-        app.run(host='0.0.0.0', port=arg_port)
+        app.run(host='0.0.0.0', port="$PORT")
     else:
-        app.run(host='0.0.0.0')
+        app.run(host='0.0.0.0', port="$PORT")
 
