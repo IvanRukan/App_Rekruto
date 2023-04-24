@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import sys
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -18,9 +19,5 @@ def main_view():
 
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1:
-        arg_host, arg_port = sys.argv[1].split(':')
-        app.run(host='0.0.0.0')
-    else:
-        app.run(host='0.0.0.0')
+    serve(app, host='0.0.0.0')
 
